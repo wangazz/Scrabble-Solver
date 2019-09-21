@@ -1,0 +1,2 @@
+# scrabble-solve
+Scrabble solver
