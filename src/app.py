@@ -4,10 +4,8 @@ from pathlib import Path
 
 
 class Scrabble:
-    def match(self, chars):  # todo
-        self.words.cont
-        matches = np.array()
-        return matches
+    def match(self, candidates):
+        return np.isin(candidates, self.words)
 
     def __init__(self, file_path):
         dict_file = open(Path(file_path))
@@ -42,8 +40,8 @@ while(__name__ == '__main__'):
     input_array = str_to_array(input_string)
 
     candidates = candidate_list(input_array)
+    match_array = dict.match(candidates)
 
-    match_array = np.isin(candidates, dict.words)
     for i in range(match_array.size):
         if match_array[i]:
             print(candidates[i])
