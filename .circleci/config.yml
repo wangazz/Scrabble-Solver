@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   build-and-test:
+    working_directory: ~/src
     executor: python/default
     steps:
       - checkout
