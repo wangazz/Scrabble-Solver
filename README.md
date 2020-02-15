@@ -1,4 +1,5 @@
-# scrabble-solve
-Scrabble solver
+# Scrabble Solver
 
-Accepts input characters and outputs possible words from the Scrabble dictionary.
+Takes a player's letters and outputs possible words from the Scrabble dictionary.
+
+Dictionary from https://github.com/dwyl/english-words
