@@ -1,5 +1,6 @@
 import itertools
 import numpy as np
+import pandas as pd
 from pathlib import Path
 
 
@@ -33,6 +34,9 @@ def candidate_list(input_array):
 
 
 dict = Scrabble('./dictionary/scrabble_words_collins_2019.txt')
+points_schema_file = Path('./dictionary/points_schema.csv')
+points_schema = pd.read_csv(points_schema_file, delimiter=',')
+
 print('Solving using a dictionary of ' + str(dict.length) + ' words.')
 
 while(__name__ == '__main__'):
