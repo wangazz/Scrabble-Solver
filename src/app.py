@@ -46,8 +46,8 @@ while(__name__ == '__main__'):
     match_array = dictionary.match(candidates)
 
     results_list = np.array([])
-    for i in range(match_array.size):
-        if match_array[i]:
+    for i, match in enumerate(match_array):
+        if match:
             results_list = np.append(results_list, candidates[i])
 
     points_list = np.array([])
