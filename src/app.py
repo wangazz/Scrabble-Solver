@@ -55,8 +55,7 @@ while(__name__ == '__main__'):
         points = calculate_points(result, points_schema)
         points_list = np.append(points_list, points)
 
-    array_to_df = pd.DataFrame([results_list, points_list]).T
-    results_unsorted = pd.DataFrame(array_to_df, columns=['word', 'points'])
-    results = results_unsorted.sort_values(by='points', ascending=False)
-
+    df = pd.DataFrame([results_list, points_list]).T
+    df.columns = ['word', 'points']
+    results = df.sort_values(by='points', ascending=False)
     print(results)
