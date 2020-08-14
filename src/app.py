@@ -6,7 +6,8 @@ from pathlib import Path
 
 dictionary = Scrabble('./dictionary/scrabble_words_collins_2019.txt')
 points_schema_file = Path('./dictionary/points_schema.csv')
-points_schema = pd.read_csv(points_schema_file, delimiter=',', index_col='char')
+points_schema = pd.read_csv(
+    points_schema_file, delimiter=',', index_col='char')
 
 
 def calculate_points(word, schema):
